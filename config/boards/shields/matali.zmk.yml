@@ -1,0 +1,12 @@
+file_format: "1"
+id: matali
+name: "Matali"
+type: shield
+url: https://github.com/MaldeeH/zmk-config-matali
+requires:
+  - pro_micro
+features:
+  - keys
+siblings:
+  - matali_left
+  - matali_right
