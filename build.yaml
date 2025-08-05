@@ -21,7 +21,5 @@
 include:
   - board: nice_nano_v2
     shield: matali_left
-    cmake-args: -DZMK_CONFIG=../../config
   - board: nice_nano_v2
     shield: matali_right
-    cmake-args: -DZMK_CONFIG=../../config
