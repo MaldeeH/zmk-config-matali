@@ -8,6 +8,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: matali_left
-  - board: nice_nano_v2
-    shield: matali_right
+    shield: matali
