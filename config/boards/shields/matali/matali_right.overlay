@@ -1,5 +1,9 @@
 #include "matali.dtsi"
 
+&default_transform { 
+    col-offset = <6>;
+};
+
 &kscan0 {
     col-gpios
         = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Outer Column       P006
