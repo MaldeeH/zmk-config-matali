@@ -1,18 +1,30 @@
+Back should be moved down 1 button to "enter" 
+Enter should be moved down to +
++ should be moved up to where "back" is at the moment
 
-First row and first row with shift and then r-alt:
-`1234567890
-~!"\$%&/()=
-\?
+mod + e should put out €. it only does that when i switch my layout to DEU
+mod + s should put out ß.
+Shift + 3 should put out §. It currently puts out \
 
-Second row 
-qwertzuiop
-QWERTZUIOP
-{}[]
+Left alt + a should put out ä 
+Left alt + o should put out ö
+Left alt + u should put out ü
 
-third row
-asdfghjkl
-@~
+mod + b should put out ´
+mod + n should put out `
 
-4th row
-<yxcvbnm,.#
-;:'
+
+lyr + P is windows layout
+lyr + Enter is MACOS layout
+lyr + TOP LEFT button is BT_CLEAR_ALL 
+
+
+  - BT_CLR_ALL moved to lower_layer top-left: config/boards/shields/matali/matali.keymap:378
+  - Added dedicated mac base + mac sym layers:
+      - mac_default_layer: config/boards/shields/matali/matali.keymap:350
+      - mac_sym_layer: config/boards/shields/matali/matali.keymap:360
+  - WIN switch on lower-layer P position (&to 0): config/boards/shields/matali/matali.keymap:379
+  - MAC switch on lower-layer Enter position (&to 2): config/boards/shields/matali/matali.keymap:380
+  - Updated LYR references so it still opens the lower layer correctly from all relevant layers (&mo 4): config/boards/shields/matali/
+    matali.keymap:332, config/boards/shields/matali/matali.keymap:347, config/boards/shields/matali/matali.keymap:357, config/boards/
+    shields/matali/matali.keymap:366, config/boards/shields/matali/matali.keymap:382
