@@ -27,7 +27,7 @@
                 n3_sect: n3_sect {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N3>, <&kp NON_US_HASH>; // § symbol
+                        bindings = <&kp N3>, <&kp NON_US_HASH>; // special symbol
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
                 n4_dllr: n4_dllr {
@@ -151,7 +151,7 @@
                 a_lalt_umlaut: a_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp A>, <&kp RA(DOT)>; // ä
+                        bindings = <&kp A>, <&kp RA(DOT)>; // LALT variant
                         mods = <(MOD_LALT)>;
                 };
                 a_ralt_at: a_ralt_at {
@@ -163,13 +163,13 @@
                 s_ralt_sz: s_ralt_sz {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp S>, <&kp RA(S)>; // ß
+                        bindings = <&kp S>, <&kp RA(S)>;
                         mods = <(MOD_RALT)>;
                 };
                 e_ralt_euro: e_ralt_euro {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp E>, <&kp RA(E)>; // €
+                        bindings = <&kp E>, <&kp RA(E)>;
                         mods = <(MOD_RALT)>;
                 };
                 lt_gt: lt_gt {
@@ -193,7 +193,7 @@
                 u_lalt_umlaut: u_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp U>, <&kp RA(SEMI)>; // ü
+                        bindings = <&kp U>, <&kp RA(SEMI)>; // LALT variant
                         mods = <(MOD_LALT)>;
                 };
                 u_ralt_rbrc: u_ralt_rbrc {
@@ -211,7 +211,7 @@
                 o_lalt_umlaut: o_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp O>, <&kp RA(COMMA)>; // ö
+                        bindings = <&kp O>, <&kp RA(COMMA)>; // LALT variant
                         mods = <(MOD_LALT)>;
                 };
                 o_ralt_rbkt: o_ralt_rbkt {
@@ -247,13 +247,13 @@
                 b_ralt_grave: b_ralt_grave {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp B>, <&kp GRAVE>; // `
+                        bindings = <&kp B>, <&kp COMMA>;
                         mods = <(MOD_RALT)>;
                 };
                 n_ralt_acute: n_ralt_acute {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N>, <&kp SQT>; // ´
+                        bindings = <&kp N>, <&kp DOT>;
                         mods = <(MOD_RALT)>;
                 };
                 comma_semi: comma_semi {
@@ -307,14 +307,29 @@
 // | TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | RET  |
 // | ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  -  |  +   |
 // | SHFT|  <  |  Y  |  X  |  C  |  V  |   |  B  |  N  |  M  |  ,  |  .  |  #   |
-//                    | LALT| CTRL| WIN |   | RALT| SPACE| LYR |
+//                    | LALT| CTRL| WIN |   | SYM | SPACE| LYR |
 
 bindings = <
-   &kp GRAVE &n1_f1 &n2_f2 &n3_f3 &n4_f4 &n5_f5         &n6_f6 &n7_ralt_bslh &n8_f8 &n9_f9 &n0_ralt_qmark &kp BSPC
-   &kp TAB   &kp Q &kp W &e_ralt_euro &kp R &kp T        &z_ralt_lbrc &u_ralt_rbrc &i_ralt_lbkt &o_ralt_rbkt &kp P &kp RET
-   &kp ESC   &a_ralt_at &s_ralt_sz &kp D &kp F &kp G     &h_ralt_left &j_ralt_down &k_ralt_up &l_ralt_right &minus_under &plus_tilde
-   &kp LSHFT &lt_ralt_pipe &kp Y &kp X &kp C &kp V        &b_ralt_grave &n_ralt_acute &kp M &comma_semi &dot_colon &hash_sqt
-                  &kp LALT &kp LCTRL &kp LGUI               &kp RALT &kp SPACE &mo 1
+   &kp GRAVE &n1_f1 &n2_f2 &n3_f3 &n4_f4 &n5_f5         &n6_f6 &n7_f7 &n8_f8 &n9_f9 &n0_f10 &kp BSPC
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T               &kp Z &u_lalt_umlaut &kp I &o_lalt_umlaut &kp P &kp RET
+   &kp ESC   &a_lalt_umlaut &kp S &kp D &kp F &kp G      &kp H &kp J &kp K &kp L &minus_under &plus_star
+   &kp LSHFT &lt_gt &kp Y &kp X &kp C &kp V               &kp B &kp N &kp M &comma_semi &dot_colon &hash_sqt
+                  &kp LALT &kp LCTRL &kp LGUI               &mo 1 &kp SPACE &mo 2
+                        >;
+                };
+                sym_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    |    |   |    |  \ |    |    |  ? |      |
+// |    |    |    | RALT(E) |    |    |   |  { |  } |  [ |  ] |    |      |
+// |    |  @ | RALT(S) |    |    |    |   |  <- |  v |  ^ |  -> |    |  ~   |
+// |    |  | |    |    |    |    |   |  , |  . |    |    |    |      |
+//                  |    |    |    |   |    |      | LYR |
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans         &trans &kp BSLH &trans &trans &kp QMARK &trans
+   &trans &trans &trans &kp RA(E) &trans &trans      &kp LBRC &kp RBRC &kp LBKT &kp RBKT &trans &trans
+   &trans &kp LS(N2) &kp RA(S) &trans &trans &trans  &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &kp TILDE
+   &trans &kp LS(BSLH) &trans &trans &trans &trans   &kp COMMA &kp DOT &trans &trans &trans &trans
+                  &trans &trans &trans                &trans &trans &mo 2
                         >;
                 };
                 lower_layer{
@@ -330,8 +345,9 @@ bindings = <
    &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &bt BT_CLR_ALL 
    &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-                  &trans &trans &trans                &trans &bt BT_CLR_ALL &mo 1
+                  &trans &trans &trans                &trans &bt BT_CLR_ALL &mo 2
                         >;
                 };
         };
 };
+

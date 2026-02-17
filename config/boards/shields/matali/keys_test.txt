@@ -1,0 +1,18 @@
+
+First row and first row with shift and then r-alt:
+`1234567890
+~!"\$%&/()=
+\?
+
+Second row 
+qwertzuiop
+QWERTZUIOP
+{}[]
+
+third row
+asdfghjkl
+@~
+
+4th row
+<yxcvbnm,.#
+;:'
