@@ -1,0 +1,61 @@
+Starting from your image (final-layout.png), here are the symbols I can read with confidence. Please confirm/ correct anything marked with (?) and fill any missing L-ALT / R-ALT where blank.
+
+Left half
+Row 1 (6 keys):
+1) center: o (small circle) | shift: (blank) | L-ALT: (blank) | R-ALT: ^
+2) center: 1 | shift: ! | L-ALT: (blank) | R-ALT: F1
+3) center: 2 | shift: " | L-ALT: (blank) | R-ALT: F2
+4) center: 3 | shift: § | L-ALT: (blank) | R-ALT: F3
+5) center: 4 | shift: $ | L-ALT: (blank) | R-ALT: F4
+6) center: 5 | shift: % | L-ALT: (blank) | R-ALT: F5
+
+Row 2:
+Tab | Q | W | E (R-ALT: €) | R | T
+
+Row 3:
+Esc | A (L-ALT: ä, R-ALT: @) | S (R-ALT: ß) | D | F | G
+
+Row 4:
+Shift | key with center ? and shift ? | Y | X | C | V
+I can see on that 2nd key: top looks like ">" and center looks like "<"; bottom-left shows a vertical bar "|". Please confirm.
+
+Thumbs (left):
+LALT | CTRL | CMD/WIN
+
+Right half
+Row 1 (6 keys + Back):
+6 (shift: &) R-ALT: F6
+7 (shift: /) R-ALT: F7, L-ALT: \
+8 (shift: () R-ALT: F8
+9 (shift: )) R-ALT: F9
+0 (shift: =) R-ALT: F10, L-ALT: ? (looks like ?) maybe
+Backspace
+
+Row 2:
+Z (R-ALT: {)
+U (L-ALT: ü, R-ALT: })
+I (R-ALT: [)
+O (L-ALT: ö, R-ALT: ])
+P
+Enter
+
+Row 3:
+H (R-ALT: ←)
+J (R-ALT: ↓)
+K (R-ALT: ↑)
+L (R-ALT: →)
+- (shift: ?) maybe second minus? no bottom marker
++ (shift: *) R-ALT: ~  (I see + center, * at top-right, ~ bottom-right)
+
+Row 4:
+B (R-ALT: ,)
+N (R-ALT: .)
+M (no alt marker seen)
+; (shift: : , L-ALT: ,)  — I see top dot (:) and bottom comma
+: (shift: : , L-ALT: .)  — I see top dot (:) and bottom dot
+# (shift: '?) — I see apostrophe at top and # center
+
+Thumbs (right):
+R-ALT | Space | layer
+
+Can you confirm / correct the uncertain ones so I can apply this cleanly in matali.keymap?

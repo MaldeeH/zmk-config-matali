@@ -1,0 +1,10 @@
+left top row: key1 top dot? bottom ^ ; key2 top ! bottom 1 with F1 ; key3 top " bottom 2 F2 ; key4 top § bottom 3 F3 ; key5 top $ bottom 4 F4 ; key6 top % bottom 5 F5
+left row2: Tab Q W E (ralt: €) R T
+left row3: ESC A (lalt: ä, ralt: @) S (ralt: ß) D F G
+left row4: Shift key, next key top > bottom <, ralt: | , then Y X C V
+thumbs left: LALT CTRL CMD/WIN
+right top row: 6 (& shift) with F6 ralt? maybe?; 7 top / bottom 7 F7, ralt: \ ; 8 top ( bottom 8 F8 ; 9 top ) bottom 9 F9 ; 0 top = bottom 0 F10, ralt ? ; Backspace
+right row2: Z (ralt {) U (lalt ü, ralt }) I (ralt [) O (lalt ö, ralt ]) P Enter
+right row3: H (ralt left arrow) J (ralt down) K (ralt up) L (ralt right) - (top - bottom -) + (top * ? center + bottom ~ ralt?)
+right row4: B (ralt ,) N (ralt .) M (no ralt) ; (top : center ; bottom ,) : (top : center : bottom .) # (top ' ? center #)
+thumbs right: RALT Space layer

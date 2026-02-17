@@ -27,7 +27,7 @@
                 n3_sect: n3_sect {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N3>, <&kp NON_US_HASH>; // Â§ symbol
+                        bindings = <&kp N3>, <&kp NON_US_HASH>; // § symbol
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
                 n4_dllr: n4_dllr {
@@ -54,95 +54,221 @@
                         bindings = <&kp N7>, <&kp FSLH>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-                n8_bslh: n8_bslh {
+                n8_lpar: n8_lpar {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N8>, <&kp BSLH>;
+                        bindings = <&kp N8>, <&kp LPAR>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-                n9_equal: n9_equal {
+                n9_rpar: n9_rpar {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N9>, <&kp EQUAL>;
+                        bindings = <&kp N9>, <&kp RPAR>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-                n0_qmark: n0_qmark {
+                n0_equal: n0_equal {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N0>, <&kp QMARK>;
+                        bindings = <&kp N0>, <&kp EQUAL>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
 
-                // Letters with MOD layer modifier (assuming MOD is a layer)
-                s_lpar: s_lpar {
+                // Number row with L-ALT for F-keys
+                n1_f1: n1_f1 {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp S>, <&kp LPAR>;
-                        mods = <(MOD_RALT)>; // Using Right Alt (AltGr) as MOD key
+                        bindings = <&n1_excl>, <&kp F1>;
+                        mods = <(MOD_LALT)>;
                 };
-                d_rpar: d_rpar {
+                n2_f2: n2_f2 {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp D>, <&kp RPAR>;
+                        bindings = <&n2_dqt>, <&kp F2>;
+                        mods = <(MOD_LALT)>;
+                };
+                n3_f3: n3_f3 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n3_sect>, <&kp F3>;
+                        mods = <(MOD_LALT)>;
+                };
+                n4_f4: n4_f4 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n4_dllr>, <&kp F4>;
+                        mods = <(MOD_LALT)>;
+                };
+                n5_f5: n5_f5 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n5_prcnt>, <&kp F5>;
+                        mods = <(MOD_LALT)>;
+                };
+                n6_f6: n6_f6 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n6_amps>, <&kp F6>;
+                        mods = <(MOD_LALT)>;
+                };
+                n7_f7: n7_f7 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n7_fslh>, <&kp F7>;
+                        mods = <(MOD_LALT)>;
+                };
+                n8_f8: n8_f8 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n8_lpar>, <&kp F8>;
+                        mods = <(MOD_LALT)>;
+                };
+                n9_f9: n9_f9 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n9_rpar>, <&kp F9>;
+                        mods = <(MOD_LALT)>;
+                };
+                n0_f10: n0_f10 {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n0_equal>, <&kp F10>;
+                        mods = <(MOD_LALT)>;
+                };
+                n7_ralt_bslh: n7_ralt_bslh {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&n7_f7>, <&kp BSLH>;
                         mods = <(MOD_RALT)>;
                 };
-                f_lbkt: f_lbkt {
+                n0_ralt_qmark: n0_ralt_qmark {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp F>, <&kp LBKT>;
+                        bindings = <&n0_f10>, <&kp QMARK>;
                         mods = <(MOD_RALT)>;
                 };
-                g_rbkt: g_rbkt {
+
+                // Letters and symbols with L-ALT / R-ALT
+                a_lalt_umlaut: a_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp G>, <&kp RBKT>;
-                        mods = <(MOD_RALT)>;
+                        bindings = <&kp A>, <&kp RA(DOT)>; // ä
+                        mods = <(MOD_LALT)>;
                 };
-                h_lt: h_lt {
+                a_ralt_at: a_ralt_at {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp H>, <&kp LT>;
+                        bindings = <&a_lalt_umlaut>, <&kp LS(N2)>; // @
                         mods = <(MOD_RALT)>;
                 };
-                j_lbrc: j_lbrc {
+                s_ralt_sz: s_ralt_sz {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp J>, <&kp LBRC>;
+                        bindings = <&kp S>, <&kp RA(S)>; // ß
                         mods = <(MOD_RALT)>;
                 };
-                k_rbrc: k_rbrc {
+                e_ralt_euro: e_ralt_euro {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp K>, <&kp RBRC>;
+                        bindings = <&kp E>, <&kp RA(E)>; // €
                         mods = <(MOD_RALT)>;
                 };
-                l_gt: l_gt {
+                lt_gt: lt_gt {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp L>, <&kp GT>;
-                        mods = <(MOD_RALT)>;
+                        bindings = <&kp LT>, <&kp GT>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-                
-                // German umlauts and special chars with MOD
-                semi_umlaut_u: semi_umlaut_u {
+                lt_ralt_pipe: lt_ralt_pipe {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp SEMI>, <&kp RA(SEMI)>; // Ã¼ using AltGr+semicolon
+                        bindings = <&lt_gt>, <&kp LS(BSLH)>; // |
                         mods = <(MOD_RALT)>;
                 };
-                comma_umlaut_o: comma_umlaut_o {
+                z_ralt_lbrc: z_ralt_lbrc {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp COMMA>, <&kp RA(COMMA)>; // Ã¶ using AltGr+comma  
+                        bindings = <&kp Z>, <&kp LBRC>;
                         mods = <(MOD_RALT)>;
                 };
-                dot_umlaut_a: dot_umlaut_a {
+                u_lalt_umlaut: u_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&dot_colon>, <&kp RA(DOT)>; // Ã¤ using AltGr+period
+                        bindings = <&kp U>, <&kp RA(SEMI)>; // ü
+                        mods = <(MOD_LALT)>;
+                };
+                u_ralt_rbrc: u_ralt_rbrc {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&u_lalt_umlaut>, <&kp RBRC>;
                         mods = <(MOD_RALT)>;
                 };
-                
+                i_ralt_lbkt: i_ralt_lbkt {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp I>, <&kp LBKT>;
+                        mods = <(MOD_RALT)>;
+                };
+                o_lalt_umlaut: o_lalt_umlaut {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp O>, <&kp RA(COMMA)>; // ö
+                        mods = <(MOD_LALT)>;
+                };
+                o_ralt_rbkt: o_ralt_rbkt {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&o_lalt_umlaut>, <&kp RBKT>;
+                        mods = <(MOD_RALT)>;
+                };
+                h_ralt_left: h_ralt_left {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp H>, <&kp LEFT>;
+                        mods = <(MOD_RALT)>;
+                };
+                j_ralt_down: j_ralt_down {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp J>, <&kp DOWN>;
+                        mods = <(MOD_RALT)>;
+                };
+                k_ralt_up: k_ralt_up {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp K>, <&kp UP>;
+                        mods = <(MOD_RALT)>;
+                };
+                l_ralt_right: l_ralt_right {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp L>, <&kp RIGHT>;
+                        mods = <(MOD_RALT)>;
+                };
+                b_ralt_grave: b_ralt_grave {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp B>, <&kp GRAVE>; // `
+                        mods = <(MOD_RALT)>;
+                };
+                n_ralt_acute: n_ralt_acute {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp N>, <&kp SQT>; // ´
+                        mods = <(MOD_RALT)>;
+                };
+                comma_semi: comma_semi {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp COMMA>, <&kp SEMI>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+                hash_sqt: hash_sqt {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp LS(N3)>, <&kp SQT>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+
                 // Special characters
                 plus_star: plus_star {
                         compatible = "zmk,behavior-mod-morph";
@@ -153,7 +279,7 @@
                 plus_tilde: plus_tilde {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp PLUS>, <&kp TILDE>;
+                        bindings = <&plus_star>, <&kp TILDE>;
                         mods = <(MOD_RALT)>;
                 };
                 
@@ -170,82 +296,6 @@
                         bindings = <&kp MINUS>, <&kp UNDER>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-
-                // Function key morphs for ESC and DEL with MOD
-                esc_f11: esc_f11 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp ESC>, <&kp F11>;
-                        mods = <(MOD_RALT)>;
-                };
-                del_f12: del_f12 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp DEL>, <&kp F12>;
-                        mods = <(MOD_RALT)>;
-                };
-
-                // Function key morphs for numbers 1-0 with MOD
-                n1_f1: n1_f1 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n1_excl>, <&kp F1>;
-                        mods = <(MOD_RALT)>;
-                };
-                n2_f2: n2_f2 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n2_dqt>, <&kp F2>;
-                        mods = <(MOD_RALT)>;
-                };
-                n3_f3: n3_f3 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n3_sect>, <&kp F3>;
-                        mods = <(MOD_RALT)>;
-                };
-                n4_f4: n4_f4 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n4_dllr>, <&kp F4>;
-                        mods = <(MOD_RALT)>;
-                };
-                n5_f5: n5_f5 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n5_prcnt>, <&kp F5>;
-                        mods = <(MOD_RALT)>;
-                };
-                n6_f6: n6_f6 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n6_amps>, <&kp F6>;
-                        mods = <(MOD_RALT)>;
-                };
-                n7_f7: n7_f7 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n7_fslh>, <&kp F7>;
-                        mods = <(MOD_RALT)>;
-                };
-                n8_f8: n8_f8 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n8_bslh>, <&kp F8>;
-                        mods = <(MOD_RALT)>;
-                };
-                n9_f9: n9_f9 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n9_equal>, <&kp F9>;
-                        mods = <(MOD_RALT)>;
-                };
-                n0_f10: n0_f10 {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&n0_qmark>, <&kp F10>;
-                        mods = <(MOD_RALT)>;
-                };
         };
 
         keymap {
@@ -253,50 +303,18 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  | DEL  |
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | MOD2 |
-// | SHFT |  +  |  Y  |  X  |  C  |  V  |   |  B  |  N   |  M  |  ,  |  .  |  -   |
-//                    | LALT| ENT | WIN |   | RALT| SPACE| LYR |
+// |  ^  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | RET  |
+// | ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  -  |  +   |
+// | SHFT|  <  |  Y  |  X  |  C  |  V  |   |  B  |  N  |  M  |  ,  |  .  |  #   |
+//                    | LALT| CTRL| WIN |   | RALT| SPACE| LYR |
 
-// LYR is the button that switches layers
-// "1" is "!" when used with SHFT
-// "2" is """ when used with SHFT
-// "3" is "Â§" when used with SHFT
-// "4" is "$" when used with SHFT
-// "5" is "%" when used with SHFT
-// "6" is "&" when used with SHFT
-// "7" is "/" when used with SHFT
-// "8" is "\" when used with SHFT
-// "9" is "=" when used with SHFT
-// "0" is "?" when used with SHFT
-
-// Mod should need to be held down to access these signs:
-// "S" is "(" when used with MOD
-// "D" is ")" when used with MOD
-// "F" is "[" when used with MOD
-// "G" is "]" when used with MOD
-// "H" is "<" when used with MOD
-// "J" is "{" when used with MOD
-// "K" is "}" when used with MOD
-// "L" is ">" when used with MOD
-// ";" is "Ã¼" when used with MOD
-// "," is "Ã¶" when used with MOD
-// "." is "Ã¤" when used with MOD
-// "." is ":" when used with SHFT
-// "+" is "*" when used with SHFT
-// "+" is "~" when used with MOD
-// "-" is "_" when used with SHFT
-// MOD with Numbers 1-10 are F1 to F10
-// F11 is ESC with MOD
-// F12 is DEL with MOD
-
-                        bindings = <
-   &esc_f11 &n1_f1 &n2_f2 &n3_f3 &n4_f4 &n5_f5         &n6_f6 &n7_f7  &n8_f8  &n9_f9   &n0_f10  &del_f12 
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T              &kp Z &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &s_lpar &d_rpar &f_lbkt &g_rbkt      &h_lt &j_lbrc  &k_rbrc  &l_gt   &semi_umlaut_u &kp RET
-   &kp LSHFT &plus_star &kp Y &kp X &kp C &kp V         &kp B &kp N  &kp M &comma_umlaut_o &dot_umlaut_a &minus_under
-                  &kp LALT &kp RET &kp LGUI                &kp RALT &kp SPACE  &mo 1
+bindings = <
+   &kp GRAVE &n1_f1 &n2_f2 &n3_f3 &n4_f4 &n5_f5         &n6_f6 &n7_ralt_bslh &n8_f8 &n9_f9 &n0_ralt_qmark &kp BSPC
+   &kp TAB   &kp Q &kp W &e_ralt_euro &kp R &kp T        &z_ralt_lbrc &u_ralt_rbrc &i_ralt_lbkt &o_ralt_rbkt &kp P &kp RET
+   &kp ESC   &a_ralt_at &s_ralt_sz &kp D &kp F &kp G     &h_ralt_left &j_ralt_down &k_ralt_up &l_ralt_right &minus_under &plus_tilde
+   &kp LSHFT &lt_ralt_pipe &kp Y &kp X &kp C &kp V        &b_ralt_grave &n_ralt_acute &kp M &comma_semi &dot_colon &hash_sqt
+                  &kp LALT &kp LCTRL &kp LGUI               &kp RALT &kp SPACE &mo 1
                         >;
                 };
                 lower_layer{
@@ -312,7 +330,7 @@
    &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &bt BT_CLR_ALL 
    &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
-                  &trans &trans &trans                &trans &bt BT_CLR_ALL &trans
+                  &trans &trans &trans                &trans &bt BT_CLR_ALL &mo 1
                         >;
                 };
         };
