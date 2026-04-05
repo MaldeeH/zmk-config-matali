@@ -319,16 +319,16 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  ^  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | RET  |
+// | TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | RET  |
 // | ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  -  |  +   |
-// | SHFT|  <  |  Y  |  X  |  C  |  V  |   |  B  |  N  |  M  |  ,  |  .  |  #   |
+// | SHFT|  <  |  Z  |  X  |  C  |  V  |   |  B  |  N  |  M  |  ,  |  .  |  #   |
 //                    | LALT| CTRL| WIN |   | SYM | SPACE| LYR |
 
 bindings = <
    &kp GRAVE &n1_f1 &n2_f2 &n3_f3 &n4_f4 &n5_f5         &n6_f6 &n7_f7 &n8_f8 &n9_f9 &n0_f10 &plus_star
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T               &kp Z &u_lalt_umlaut &kp I &o_lalt_umlaut &kp P &kp BSPC
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T               &kp Y &u_lalt_umlaut &kp I &o_lalt_umlaut &kp P &kp BSPC
    &kp ESC   &a_lalt_umlaut &kp S &kp D &kp F &kp G      &kp H &kp J &kp K &kp L &minus_under &kp RET
-   &kp LSHFT &lt_gt &kp Y &kp X &kp C &kp V               &kp B &kp N &kp M &comma_semi &dot_colon &hash_sqt
+   &kp LSHFT &lt_gt &kp Z &kp X &kp C &kp V               &kp B &kp N &kp M &comma_semi &dot_colon &hash_sqt
                   &kp LALT &kp LCTRL &kp LGUI               &mo 1 &kp SPACE &mo 4
                         >;
                 };
@@ -351,9 +351,9 @@ bindings = <
 // Same physical layout; only SYM key targets mac_sym_layer.
                         bindings = <
    &kp GRAVE &n1_f1 &n2_f2 &n3_f3 &n4_f4 &n5_f5         &n6_f6 &n7_f7 &n8_f8 &n9_f9 &n0_f10 &plus_star
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T               &kp Z &u_lalt_umlaut &kp I &o_lalt_umlaut &kp P &kp BSPC
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T               &kp Y &u_lalt_umlaut &kp I &o_lalt_umlaut &kp P &kp BSPC
    &kp ESC   &a_lalt_umlaut &kp S &kp D &kp F &kp G      &kp H &kp J &kp K &kp L &minus_under &kp RET
-   &kp LSHFT &lt_gt &kp Y &kp X &kp C &kp V               &kp B &kp N &kp M &comma_semi &dot_colon &hash_sqt
+   &kp LSHFT &lt_gt &kp Z &kp X &kp C &kp V               &kp B &kp N &kp M &comma_semi &dot_colon &hash_sqt
                   &kp LALT &kp LCTRL &kp LGUI               &mo 3 &kp SPACE &mo 4
                         >;
                 };
