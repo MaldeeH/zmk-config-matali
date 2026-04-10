@@ -16,10 +16,14 @@ mod + n should put out `
 
 lyr + P is windows layout
 lyr + Enter is MACOS layout
-lyr + TOP LEFT button is BT_CLEAR_ALL 
+lyr + TOP LEFT button is BT profile 0
+lyr + 2nd TOP LEFT button is BT profile 1
+lyr + TOP RIGHT button clears current BT bond
 
 
-  - BT_CLR_ALL moved to lower_layer top-left: config/boards/shields/matali/matali.keymap:378
+  - BT profile 0 on lower_layer top-left
+  - BT profile 1 on lower_layer top-row 2nd key
+  - BT_CLR on lower_layer top-right
   - Added dedicated mac base + mac sym layers:
       - mac_default_layer: config/boards/shields/matali/matali.keymap:350
       - mac_sym_layer: config/boards/shields/matali/matali.keymap:360

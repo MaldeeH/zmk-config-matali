@@ -161,7 +161,6 @@
                         bindings = <&n0_f10>, <&kp QMARK>;
                         mods = <(MOD_RALT)>;
                 };
-
                 // Letters and symbols with L-ALT / R-ALT
                 a_lalt_umlaut: a_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
@@ -367,15 +366,15 @@ bindings = <
                         >;
                 };
                 lower_layer{
-// Utility layer: OS mode switch + bluetooth clear.
+// Utility layer: OS mode switch + bluetooth profile management.
 // -----------------------------------------------------------------------------------------
-// | BT |     |     |     |     |     |      |     |     |     |     |     |    |
+// | BT1| BT2 |     |     |     |     |      |     |     |     |     |     | CLR|
 // |    |     |     |     |     |     |      |     |     |     | WIN |     |    |
 // |    |     |     |     |     |     |      |     |     |     |     |     | MAC|
 // |    |     |     |     |     |     |      |     |     |     |     |     |    |
 //                  |     |     |     |      |     |          | LYR |
                         bindings = <
-   &bt BT_CLR_ALL &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans 
+   &bt BT_SEL 0 &bt BT_SEL 1 &trans &trans &trans &trans         &trans &trans &trans &trans &trans &bt BT_CLR 
    &trans &trans &trans &trans &trans &trans                 &trans &trans &trans &trans &to 0 &trans
    &trans &trans &trans &trans &trans &trans                 &trans &trans &trans &trans &trans &to 2 
    &trans &trans &trans &trans &trans &trans         &trans &trans &trans &trans &trans &trans
@@ -384,4 +383,3 @@ bindings = <
                 };
         };
 };
-
