@@ -23,6 +23,21 @@
                         // Dead diaeresis, then i (intl layout output)
                         bindings = <&macro_tap &kp DQT &kp I>;
                 };
+                mac_adiaeresis: mac_adiaeresis {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp LA(U) &kp A>;
+                };
+                mac_odiaeresis: mac_odiaeresis {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp LA(U) &kp O>;
+                };
+                mac_udiaeresis: mac_udiaeresis {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp LA(U) &kp U>;
+                };
         };
 
         behaviors {
@@ -165,7 +180,7 @@
                 a_lalt_umlaut: a_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp A>, <&kp RA(DOT)>; // LALT variant
+                        bindings = <&kp A>, <&mac_adiaeresis>;
                         mods = <(MOD_LALT)>;
                 };
                 a_ralt_at: a_ralt_at {
@@ -207,7 +222,7 @@
                 u_lalt_umlaut: u_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp U>, <&kp RA(SEMI)>; // LALT variant
+                        bindings = <&kp U>, <&mac_udiaeresis>;
                         mods = <(MOD_LALT)>;
                 };
                 u_ralt_rbrc: u_ralt_rbrc {
@@ -225,7 +240,7 @@
                 o_lalt_umlaut: o_lalt_umlaut {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp O>, <&kp RA(COMMA)>; // LALT variant
+                        bindings = <&kp O>, <&mac_odiaeresis>;
                         mods = <(MOD_LALT)>;
                 };
                 o_ralt_rbkt: o_ralt_rbkt {
